@@ -1,5 +1,5 @@
 {
-    "name": "stannp/stannp-php",
+    "name": "ephraimju/stannp-php",
     "type": "package",
     "description": "PHP SDK for the Stannp mail API",
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "Nathan Wright",
             "email": "nathan@stannp.com"
+        },
+        {
+            "name": "Ken Yu",
+            "email": "amzprdc@gmail.com"
         }
     ],
     "require": {
