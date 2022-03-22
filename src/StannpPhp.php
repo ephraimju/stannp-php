@@ -32,7 +32,7 @@ class StannpPhp
             $this->api_key = $api_key;
     
             $this->ch = curl_init();
-    
+
             curl_setopt($this->ch, CURLOPT_HEADER, false);
             curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($this->ch, CURLOPT_CONNECTTIMEOUT, 30);
