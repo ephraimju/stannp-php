@@ -44,13 +44,15 @@ class Campaigns extends StannpPhp
      * Create a campaign
      * 
      * @param string $campaignName Name your campaign for reference.
-     * @param string $campaignType The type of campaign this will be (a6-postcard | a5-postcard | letter).
+     * @param string $campaignType The type of campaign this will be UK(a6-postcard | a5-postcard | letter), US(4x6-postcard | 6x9-postcard | us-letter).
      * @param string $templateId Template id.
      * @param string $groupId Group id.
+     * @param string $what_recipients	all | valid | not_valid | int
+     * @param string $addons	FIRST_CLASS | STANDARD_CLASS
      * 
      * @return JSON  Encoded JSON object
      */
-    public function new($campaignName, $campaignType, $templateId, $groupId, $whatRecipients = "all") 
+    public function new($campaignName, $campaignType, $templateId, $groupId, $whatRecipients = "all", $addons='STANDARD_CLASS') 
     {
         $path = "/campaigns/create";
         $params = array(
@@ -58,7 +60,8 @@ class Campaigns extends StannpPhp
             "type" => $campaignType,
             "template_id" => $templateId,
             "group_id" => $groupId,
-            "what_recipients" => $whatRecipients
+            "what_recipients" => $whatRecipients,
+            "addons" => $addons
         );
 
         return $this->postRequest($path, $params);
