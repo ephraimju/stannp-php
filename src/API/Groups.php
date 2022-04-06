@@ -22,7 +22,7 @@ class Groups extends StannpPhp
      */
     public function list($limit = 100) 
     {
-        $pat = "/groups/list";
+        $path = "/groups/list";
         $params = array (
             "limit" => $limit
         );
