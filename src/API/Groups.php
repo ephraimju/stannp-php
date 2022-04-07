@@ -84,6 +84,22 @@ class Groups extends StannpPhp
     }
 
     /**
+     * purge a group
+     * 
+     * @param int $groupId limit number of resukts returned
+     * 
+     * @return encoded JSON object
+     */
+    public function purge($groupId = -1) 
+    {
+        $path = "/groups/purge";
+        $params = array (
+            "id" => $groupId
+        );
+    
+        return $this->postRequest($path, $params);
+    }
+    /**
      * Delete a group
      * 
      * @param int $groupId limit number of resukts returned
