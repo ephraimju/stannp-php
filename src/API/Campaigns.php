@@ -32,10 +32,7 @@ class Campaigns extends StannpPhp
      */
     public function get($campaignId) 
     {
-        $path = "/campaigns/get";
-        $params = array(
-            "id" => $campaignId
-        );
+        $path = "/campaigns/get/{$campaignId}";
 
         return $this->getRequest($path, $params);
     }
