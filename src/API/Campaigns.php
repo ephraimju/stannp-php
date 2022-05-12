@@ -34,7 +34,7 @@ class Campaigns extends StannpPhp
     {
         $path = "/campaigns/get/{$campaignId}";
 
-        return $this->getRequest($path, $params);
+        return $this->getRequest($path);
     }
 
     /**

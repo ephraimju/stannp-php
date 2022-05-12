@@ -8,7 +8,7 @@ More information regarding parameters and API options can be found within the St
 best installed via composer
 
 ```bash
-composer update stannp\stannpphp
+composer update ephraimju\stannpphp
 ```
 
 The autoloader must be required
